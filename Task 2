@@ -1,0 +1,66 @@
+#include<iostream>
+using namespace std;
+
+void Add(float a,float b)
+{
+    float result = a+b; 
+    cout<<"Addition is "<<result<<endl;
+}
+void Substraction(float a,float b)
+{
+    float result = a-b; 
+    cout<<"Substraction is "<<result<<endl;
+}
+void Multiplication(float a,float b)
+{
+    float result = a*b; 
+    cout<<"Multiplication is "<<result<<endl;
+}
+void Division(float a,float b)
+{
+    float result = a/b; 
+    cout<<"Division is "<<result<<endl;
+}
+void Calculation()
+{
+    char choise;
+    cout<<"-----SIMPLE CALCULATOR-----"<<endl;
+    float a,b;
+    cout<<"Enter 1st Number : "<<endl;
+    cin>>a;
+    cout << "Select an Operation (+, -, *, /): "<<endl;
+    cin>>choise;
+    cout<<"Enter 2st Number : "<<endl;
+    cin>>b;
+    switch (choise)
+    {
+        case '+':
+        {
+            Add(a,b);
+            break;
+        }
+        case '-':
+        {
+            Substraction(a,b);
+            break;
+        }
+        case '*':
+        {
+            Multiplication(a,b);
+            break;
+
+        }
+        case '/':
+        {
+            Division(a,b);
+            break;
+        }
+     }
+     
+}
+
+int main()
+{
+    Calculation();
+    return 0;
+}
