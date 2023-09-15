@@ -1,0 +1,39 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+
+void NumGuessingGame()
+{
+    int num;
+    srand(time(0));
+    int RandomNumber = rand() % 100 + 1;
+    int attempts=0;  
+
+     do{
+        cout<<"Enter Your Guess 0 - 100 : "<<endl;
+        cin>>num;
+        attempts++;
+    
+       if (num > RandomNumber) 
+        {
+            cout <<"Your Guess is Too high! Try again"<<endl;
+        } 
+        else if (num < RandomNumber) 
+        {
+            cout <<"Your Guess is Too low! Try again"<<endl;
+        } 
+        else 
+        {
+            cout <<"Congratulations! You Gueess The Number Correctly" <<endl;
+            cout <<"Number of attempts : " << attempts <<endl;
+        }
+
+    }while (num != RandomNumber);
+
+}
+int main()
+{
+ NumGuessingGame();
+ return 0;
+}
